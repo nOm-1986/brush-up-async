@@ -13,5 +13,8 @@
     "asincronismo"
   ],
   "author": "Jose Fabian Beltran Meza - joshefbeltran@gmail.com",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  }
 }
