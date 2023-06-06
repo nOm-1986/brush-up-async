@@ -4,7 +4,7 @@
   "description": "Asynchronous concepts in-depth, examples and lots of exercises.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "callback": "node src/xmlhttprequest/challenge.js"
   },
   "keywords": [
     "JS",
