@@ -38,4 +38,4 @@ const requestTwo = () => {
         console.log(data1);
     });
 }
-requestTwo();
+requestOne();
