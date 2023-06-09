@@ -30,19 +30,26 @@ fetchData2(`${API}/products?offset=0&limit=3`)
             });
     });
 */
-fetchData2(`${API}/products?offset=0&limit=3`)
+// fetchData2(`${API}/products?offset=0&limit=3`)
+//     .then(resp => resp.json())
+//     .then(products => {
+//         console.log('Productos list: ', products)
+//         return fetchData2(`${API}/products/${products[0].id}`)
+//     })
+//     .then(resp => resp.json())
+//     .then(item => {
+//         console.log('Single product: ', item);
+//         return fetchData2(`${API}/categories/${item.category.id}`);
+//     })
+//     .then(resp => resp.json())
+//     .then(categories => console.log(categories.name))
+//     .catch(err => console.error(err))
+//     .finally(() => console.log('Done'));
+
+
+
+//Using directly fetch
+const other = fetch(`${API}/products?offset=0&limit=3`)
     .then(resp => resp.json())
-    .then(products => {
-        console.log('Productos list: ', products)
-        return fetchData2(`${API}/products/${products[0].id}`)
-    })
-    .then(resp => resp.json())
-    .then(item => {
-        console.log('Single product: ', item);
-        return fetchData2(`${API}/categories/${item.category.id}`);
-    })
-    .then(resp => resp.json())
-    .then(categories => console.log(categories.name))
-    .catch(err => console.error(err))
-    .finally(() => console.log('Done'));
+    .then(items => console.log(items));
 
