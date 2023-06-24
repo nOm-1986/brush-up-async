@@ -1,7 +1,7 @@
 const API_URL = [
     'https://api.thecatapi.com/v1/images/search',
-    '?limit=4',
-    '&order=Desc',
+    '?limit=5',
+    '&api_key=live_e2gHbmwr9EWsg0kUhzWMGJnVUXsgxpxJXeHiUPECc33Cjqhtp1v7WXZ1mM5MmZT0',
 ].join('');
 
 const content = null || document.getElementById('content');
