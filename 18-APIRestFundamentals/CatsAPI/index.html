@@ -11,8 +11,8 @@
             justify-content: space-around;
         }
         .img-content {
-            width: 250px;
-            height: 250px;
+            width: 200px;
+            height: 200px;
             overflow: hidden;
             margin: 15px;
         }
@@ -28,7 +28,16 @@
     <h1>Random Cats</h1>
     <button type="button" id="refresh">Refresh image</button>
     <br>
-    <div id="content"></div>
+    <h2>Random Michies</h2>
+    <section id="content"></section>
+    <br>
+    <h2>Favorite Michies</h2>
+    <section id="favorites">
+        <article class="img-content">
+            <img width="220" src="${item.url}" alt="${item.id}">
+            <button>Desfavoritar Michi</button>
+          </article>
+    </section>
     <script defer src="./main.js"></script>
 </body>
 </html>
