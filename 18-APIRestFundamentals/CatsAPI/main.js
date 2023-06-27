@@ -1,10 +1,16 @@
+const error = document.getElementById('error');
+const content = null || document.getElementById('content');
+const favorites = null || document.getElementById('favorites');
+const button = document.getElementById('refresh');
+const d = document;
+const uploadMichiPhoto = d.getElementById('uploadMichiPhoto');
+
 const API_KEY = "live_e2gHbmwr9EWsg0kUhzWMGJnVUXsgxpxJXeHiUPECc33Cjqhtp1v7WXZ1mM5MmZT0"
 const API_URL = [
     'https://api.thecatapi.com/v1/images/search',
     '?limit=8',
     `&api_key=${API_KEY}`,
 ].join('');
-
 const API_URL_FAVORITES = 'https://api.thecatapi.com/v1/favourites'
 
 const optionsGet = {
@@ -13,14 +19,6 @@ const optionsGet = {
 		'x-api-key': API_KEY
 	}
 };
-
-const error = document.getElementById('error');
-const content = null || document.getElementById('content');
-const favorites = null || document.getElementById('favorites');
-const button = document.getElementById('refresh');
-const d = document;
-
-
 
 async function getCatsFetch(url, options = null) {
     const response = await fetch(url, options);
@@ -100,6 +98,12 @@ const deleteFavorteMiches = async (id) => {
     getFavoriteMichies(API_URL_FAVORITES, optionsGet);
 }
 
+const uploadMichi = () => {
+    const form = d.getElementById('uploadingForm');
+    const formData = new FormData(form);
+    console.log(formData.get('file'));
+}
+
 getRandomMichies(API_URL);
 getFavoriteMichies(API_URL_FAVORITES, optionsGet);
 
@@ -116,3 +120,6 @@ d.addEventListener('click', (e) => {
         deleteFavorteMiches(e.target.value);
     }
 })
+
+
+uploadMichiPhoto.addEventListener('click', uploadMichi);
